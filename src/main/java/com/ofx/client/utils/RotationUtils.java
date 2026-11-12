@@ -3,7 +3,7 @@ import net.minecraft.client.MinecraftClient; import net.minecraft.entity.Entity;
 public class RotationUtils {
     public static void silentRotate(float targetYaw, float targetPitch) {
         MinecraftClient mc = MinecraftClient.getInstance();
-        if(mc.player != null) mc.player.networkHandler.sendPacket(new PlayerMoveC2SPacket.LookAndOnGround(targetYaw, targetPitch, mc.player.isOnGround(), false));
+        if(mc.player != null) mc.player.networkHandler.sendPacket(new PlayerMoveC2SPacket.LookAndOnGround(targetYaw, targetPitch, mc.player.isOnGround()));
     }
     public static float[] getRotations(Entity entity) {
         MinecraftClient mc = MinecraftClient.getInstance();
