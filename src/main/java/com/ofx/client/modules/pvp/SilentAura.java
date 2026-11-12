@@ -11,7 +11,7 @@ public class SilentAura extends Module {
         if (target != null) {
             float[] rots = RotationUtils.getRotations(target); RotationUtils.silentRotate(rots[0], rots[1]);
             if (mc.player.distanceTo(target) <= range && mc.player.getAttackCooldownProgress(0.5f) >= 1.0f) {
-                mc.player.networkHandler.sendPacket(PlayerInteractEntityC2SPacket.createAttackPacket(target, mc.player.isSneaking())); mc.player.swingHand(Hand.MAIN_HAND); 
+                mc.player.networkHandler.sendPacket(PlayerInteractEntityC2SPacket.attack(target, mc.player.isSneaking())); mc.player.swingHand(Hand.MAIN_HAND); 
                 if (hitEffects && mc.world != null) { for(int i=0; i<6; i++) mc.world.addParticle(ParticleTypes.CRIT, target.getX(), target.getY() + 1, target.getZ(), 0, 0, 0); }
                 delay = 1;
             }
