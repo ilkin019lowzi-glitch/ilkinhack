@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "ilkindlcpro",
+  "version": "7.2.0",
+  "name": "ilkindlc Pro",
+  "description": "Professional Ultimate Client",
+  "authors": ["ofx", "ilkin"],
+  "environment": "client",
+  "entrypoints": { "client": ["com.ofx.client.PacketClient"] },
+  "depends": { "fabricloader": ">=0.16.9", "minecraft": "~1.21.1", "java": ">=21", "fabric-api": "*" }
+}
