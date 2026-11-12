@@ -1,5 +1,6 @@
 package com.ofx.client;
 import com.ofx.client.modules.*;
+import com.ofx.client.modules.Module;
 import com.ofx.client.modules.pvp.*;
 import com.ofx.client.modules.movement.*;
 import com.ofx.client.modules.visual.*;
